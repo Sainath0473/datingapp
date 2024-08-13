@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+
+<a href="/profile/new">Create New Profile</a>
+{{#if profiles.length}}
+  <h2>Profiles</h2>
+  <p>Total Profiles: {{profiles.length}}</p>
+  <ul>
+    {{#each profiles}}
+      <li>
+        <p>Name: {{name}}</p>
+        <a href="/profile/edit/{{_id}}">Edit</a>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No profiles available.</p>
+{{/if}}
